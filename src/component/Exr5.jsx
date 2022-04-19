@@ -39,9 +39,6 @@ const Exr5 = () => {
   };
   const editUser = (e) => {
     e.preventDefault();
-    data.map((user)=>{
-     return  user.id === editData.id ? {...user, email: editData.email, name: editData.name } : user
-    })
     setData((prev)=>prev.map((user)=>{
       return  user.id === editData.id ? {...user, email: editData.email, name: editData.name } : user
      }))
